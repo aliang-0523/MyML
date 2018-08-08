@@ -13,7 +13,7 @@ while(abs(theta.A[0]-temp.A[0])>0.000000001):
         b=a.A;
         sum+=b[0]*theta.A[0]*b[0]-b[0]*y.A[count];
         count+=1;
-    sum=sum/3;
+    sum=sum/y.A.size;
     count=0;
     temp.A[0]=theta.A[0];
     theta.A[0]=theta.A[0]-0.1*sum;
