@@ -8,7 +8,7 @@ sum=0;
 h=mat([[1],[1],[1]])
 count=0;
 times=0;
-while(abs(theta.A[0]-temp.A[0])>0.00000001):
+while(abs(theta.A[0]-temp.A[0])>0.000000001):
     for a in x[:, 1]:
         b=a.A;
         sum+=b[0]*theta.A[0]*b[0]-b[0]*y.A[count];
