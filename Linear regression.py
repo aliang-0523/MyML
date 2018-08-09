@@ -8,7 +8,16 @@ sum=0;
 h=mat([[1],[1],[1]])
 count=0;
 times=0;
-while(abs(theta.A[0]-temp.A[0])>0.000000001):
+def compare(the,tem):
+    countn = 0;
+    for i in the.A:
+        if(abs(i-tem.A[np.where(the.A==i)])>0.000000001):
+            countn+=1;
+    if(countn==the.A.size):
+        return True;
+    else:
+        return False;
+while(compare(theta,temp)):
     for a in x[:, 1]:
         b=a.A;
         sum+=b[0]*theta.A[0]*b[0]-b[0]*y.A[count];
