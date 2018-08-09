@@ -1,7 +1,7 @@
 from numpy import *;
 import numpy as np
-x=np.matrix([[1,1],[1,2],[1,3]]);
-y=np.matrix([[1],[2],[3]]);
+x=np.matrix([[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[1,7],[1,8],[1,9],[1,10]]);
+y=np.matrix([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]]);
 theta=np.matrix([[0.5]]);
 temp=np.matrix([[0.0]]);
 '判断theta值是否收敛'
@@ -16,10 +16,10 @@ def compare(the,tem,slrange):
         return False;
 '线性回归算法'
 def linear_regression(learning_rate,slrange):
-    sum = 0;
     count = 0;
     times = 0;
     while(compare(theta,temp,slrange)):
+        sum = 0.0;
         for a in x[:, 1]:
             b=a.A;
             'jtheta对theta(i)的偏导的和'
@@ -33,4 +33,4 @@ def linear_regression(learning_rate,slrange):
     print(theta.A[0]);
     print(times);
 if __name__ == '__main__':
-    linear_regression(0.1,0.000000001);
+    linear_regression(0.05,0.000000001);
