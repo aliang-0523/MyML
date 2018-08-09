@@ -4,7 +4,6 @@ x=np.matrix([[1,1],[1,2],[1,3]]);
 y=np.matrix([[1],[2],[3]]);
 theta=np.matrix([[0.5]]);
 temp=np.matrix([[0.0]]);
-h=mat([[1],[1],[1]])
 '判断theta值是否收敛'
 def compare(the,tem):
     countn = 0;
@@ -23,6 +22,7 @@ def linear_regression():
     while(compare(theta,temp)):
         for a in x[:, 1]:
             b=a.A;
+            'jtheta对theta(i)的偏导的和'
             sum+=b[0]*theta.A[0]*b[0]-b[0]*y.A[count];
             count+=1;
         sum=sum/y.A.size;
