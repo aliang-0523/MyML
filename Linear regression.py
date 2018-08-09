@@ -1,7 +1,7 @@
 from numpy import *;
 import numpy as np
-x=np.matrix([[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[1,7],[1,8],[1,9],[1,10]]);
-y=np.matrix([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]]);
+x=np.matrix([[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[1,7],[1,8],[1,9],[1,10],[1,11],[1,12],[1,13],[1,14],[1,15],[1,16]]);
+y=np.matrix([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16]]);
 theta=np.matrix([[0.5]]);
 temp=np.matrix([[0.0]]);
 '判断theta值是否收敛'
@@ -33,4 +33,4 @@ def linear_regression(learning_rate,slrange):
     print(theta.A[0]);
     print(times);
 if __name__ == '__main__':
-    linear_regression(0.05,0.000000001);
+    linear_regression(0.005,0.000000001);
