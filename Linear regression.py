@@ -44,4 +44,4 @@ def jtheta(x,y,theta):
         sum+=math.pow(theta.A[0]+theta.A[1]*x[i]-y[i],2);
     return sum;
 if __name__ == '__main__':
-    linear_regression(0.019,0.00000001);
+    linear_regression(0.075,0.00000001);
