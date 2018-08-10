@@ -29,7 +29,8 @@ def linear_regression(learning_rate,slrange):
             'jtheta对theta(i)的偏导的和'
             for i in range(0, len(sum)):
                 '模型改变之后hypothesis(theta)的计算方式也需要改变'
-                sum[i]+=math.pow(b[0],i)*(theta.A[0]+b[0]*theta.A[1]-y.A[count]);
+                'sum[i]+=math.pow(b[0],i)*(theta.A[0]+b[0]*theta.A[1]-y.A[count]);'
+                sum[i] += math.pow(b[0], i) * hypothesis(theta,b[0],y.A[count]);
             count+=1;
         for i in range(0, len(sum)):
             sum[i]=sum[i]/y.A.size;
@@ -40,5 +41,7 @@ def linear_regression(learning_rate,slrange):
     print(theta.A[0]);
     print(theta.A[1]);
     print(times);
+def hypothesis(theta,x,y):
+    return theta.A[0]+x*theta.A[1]-y;
 if __name__ == '__main__':
     linear_regression(0.32,0.000000000001);
